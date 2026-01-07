@@ -4,8 +4,6 @@ import soundfile as sf
 from ovos_plugin_manager.templates.tts import TTS as OVOS_TTS
 from ovos_utils.lang import standardize_lang_tag
 from ovos_utils.log import LOG
-
-# Gebruik de geteste import op basis van jouw systeem
 from ovos_utils.xdg_utils import xdg_data_home
 
 # Import the helper functions from your local helper.py
@@ -99,3 +97,4 @@ class SupertonicTTSPlugin(OVOS_TTS):
     @property
     def available_languages(self) -> set:
         return self.SUPPORTED_LANGS
+
