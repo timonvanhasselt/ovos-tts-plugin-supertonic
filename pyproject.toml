@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-tts-plugin-supertonic"
+version = "0.1.0"
+description = "Lightweight Supertonic V2 TTS plugin for Open Voice OS with auto-download"
+readme = "README.md"
+authors = [{name = "Your Name"}]
+license = {text = "Apache-2.0"}
+dependencies = [
+    "ovos-plugin-manager",
+    "ovos-utils",
+    "onnxruntime",
+    "numpy",
+    "requests",
+    "soundfile"
+]
+
+[project.entry-points."mycroft.plugin.tts"]
+supertonic_tts_plugin = "ovos_tts_plugin_supertonic:SupertonicTTSPlugin"
